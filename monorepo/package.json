@@ -1,0 +1,45 @@
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "prettier:format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "eslint:format": "turbo run eslint:format",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "prettier": "^3.0.2",
+    "tsconfig": "*",
+    "turbo": "latest"
+  },
+  "lint-staged": {
+    "apps/**/*": [
+      "yarn prettier:format",
+      "yarn eslint:format"
+    ],
+    "packages/**/*": [
+      "yarn prettier:format",
+      "yarn eslint:format"
+    ],
+    "storyblok-ui/**/*": [
+      "yarn prettier:format",
+      "yarn eslint:format"
+    ],
+    "*.json": [
+      "yarn prettier:format"
+    ]
+  }
+}

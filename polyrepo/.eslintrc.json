@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:eslint-plugin-next-on-pages/recommended",
+    "next",
+    "prettier"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  },
+  "plugins": [
+    "eslint-plugin-next-on-pages"
+  ]
+}

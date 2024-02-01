@@ -1,0 +1,24 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^13.4.19",
+    "@monorepo/ui": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.3",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "tailwind-config": "*",
+    "@monorepo/env": "*"
+  }
+}
